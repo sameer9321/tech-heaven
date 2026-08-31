@@ -1,0 +1,4 @@
+import { NextRequest, NextResponse } from "next/server"; import { prisma } from "@/lib/prisma"; import { slugify } from "@/lib/utils";
+function auth(req:NextRequest){return req.headers.get("x-admin-password")===process.env.ADMIN_PASSWORD}
+export async function GET(){return NextResponse.json(await prisma.product.findMany({orderBy:{createdAt:"desc"}}))}
+export async function POST(req:NextRequest){if(!auth(req))return NextResponse.json({error:"Unauthorized"},{status:401});try{const b=await req.json();const slug=slugify(b.slug||b.name);const product=await prisma.product.create({data:{name:b.name,slug,category:b.category,brand:b.brand,price:Number(b.price),oldPrice:b.oldPrice?Number(b.oldPrice):null,stock:Number(b.stock||0),image:b.image,shortDesc:b.shortDesc,description:b.description,specs:b.specs,featured:Boolean(b.featured)}});return NextResponse.json(product)}catch(e:any){return NextResponse.json({error:e.message||"Unable to create product"},{status:400})}}
