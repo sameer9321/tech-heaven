@@ -63,7 +63,7 @@ export default function Footer() {
           <p className="text-sm text-slate-400 mb-3">Deals, new arrivals & buying guides — no spam.</p>
           <NewsletterForm />
           <div className="mt-5 space-y-2 text-sm text-slate-400">
-            <a href="tel:+923001234567" className="flex items-center gap-2 hover:text-white transition"><Phone size={15} /> +92 300 1234567</a>
+            <a href="tel:+923080123766" className="flex items-center gap-2 hover:text-white transition"><Phone size={15} /> +92 300 1234567</a>
             <a href="mailto:sales@turbotech.pk" className="flex items-center gap-2 hover:text-white transition"><Mail size={15} /> sales@turbotech.pk</a>
             <span className="flex items-center gap-2"><MapPin size={15} /> Karachi, Pakistan</span>
           </div>

@@ -38,7 +38,7 @@ export default async function Detail({ params }: { params: Promise<{ id: string 
     take: 4, orderBy: { featured: "desc" },
   });
 
-  const wa = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "923001234567";
+  const wa = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "923080123766";
   const off = p.oldPrice && p.oldPrice > p.price ? Math.round(((p.oldPrice - p.price) / p.oldPrice) * 100) : 0;
 
   const jsonLd = {

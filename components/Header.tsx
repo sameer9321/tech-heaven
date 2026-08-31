@@ -28,7 +28,7 @@ export default function Header() {
       <div className="hidden md:block bg-primary text-slate-300 text-[13px]">
         <div className="container-tt flex items-center justify-between py-2">
           <div className="flex items-center gap-5">
-            <a href="tel:+923001234567" className="flex items-center gap-1.5 hover:text-white transition"><Phone size={13} /> +92 300 1234567</a>
+            <a href="tel:+923080123766" className="flex items-center gap-1.5 hover:text-white transition"><Phone size={13} /> +92 300 1234567</a>
             <a href="mailto:sales@turbotech.pk" className="flex items-center gap-1.5 hover:text-white transition"><Mail size={13} /> sales@turbotech.pk</a>
             <span className="flex items-center gap-1.5"><MapPin size={13} /> Karachi, Pakistan</span>
           </div>

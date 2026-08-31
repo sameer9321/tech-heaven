@@ -12,7 +12,7 @@ const PAYMENTS = [
   { id: "Easypaisa / JazzCash", label: "Easypaisa / JazzCash", desc: "Mobile wallet payment", icon: <Wallet size={18} /> },
 ];
 
-const WA = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "923001234567";
+const WA = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "923080123766";
 
 export default function CheckoutClient() {
   const { cart, cartTotal, clearCart, ready } = useStore();
